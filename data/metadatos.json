@@ -1,0 +1,6 @@
+{
+  "arquitectura.md": {"categoria": "arquitectura", "etiquetas": ["microservicios", "datos", "observabilidad"]},
+  "guia_incidentes.md": {"categoria": "operaciones", "etiquetas": ["incidentes", "runbooks", "guardia"]},
+  "despliegue.md": {"categoria": "devops", "etiquetas": ["ci-cd", "canary", "feature-flags", "migraciones"]},
+  "seguridad.md": {"categoria": "seguridad", "etiquetas": ["secretos", "accesos", "datos-personales", "vulnerabilidades"]}
+}

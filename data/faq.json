@@ -1,0 +1,58 @@
+[
+  {
+    "id": "faq-01",
+    "pregunta": "¿Cómo pido acceso a producción?",
+    "respuesta": "Se pide con un ticket en la Mesa de Accesos, indicando qué servicio necesitás y por qué. Lo tiene que aprobar el líder de tu equipo. Una vez aprobado, el acceso es solo a través del bastión con MFA.",
+    "categoria": "seguridad",
+    "etiquetas": ["accesos", "bastion"]
+  },
+  {
+    "id": "faq-02",
+    "pregunta": "¿Dónde veo el estado de un pedido?",
+    "respuesta": "El estado de un pedido se consulta en el endpoint GET /v1/pedidos/{id}/estado del api-gateway. Los estados posibles son PENDIENTE, APROBADO, RECHAZADO y ENTREGADO.",
+    "categoria": "arquitectura",
+    "etiquetas": ["pedidos", "api"]
+  },
+  {
+    "id": "faq-03",
+    "pregunta": "¿Cómo nombro un feature flag nuevo?",
+    "respuesta": "Los feature flags se crean en Unleash con nombres en snake_case que empiezan con el nombre del equipo, por ejemplo carrito_nuevo_checkout. Cada flag tiene que tener una descripción y una persona responsable.",
+    "categoria": "devops",
+    "etiquetas": ["feature-flags", "unleash"]
+  },
+  {
+    "id": "faq-04",
+    "pregunta": "¿Qué hago si un test falla solo en el pipeline de CI?",
+    "respuesta": "Se vuelve a correr el pipeline una sola vez. Si vuelve a fallar, el test se marca con la etiqueta flaky y hay que abrir un ticket para arreglarlo dentro de las 48 horas. Está prohibido desactivar un test para poder mergear.",
+    "categoria": "devops",
+    "etiquetas": ["ci-cd", "tests"]
+  },
+  {
+    "id": "faq-05",
+    "pregunta": "¿Cuánto tarda en verse en la tienda un cambio de precio?",
+    "respuesta": "Hasta 5 minutos, porque el catálogo se guarda en caché durante 300 segundos. Si es urgente, se puede invalidar la caché de un producto con colibri-ops cache purgar <id-producto>.",
+    "categoria": "arquitectura",
+    "etiquetas": ["catalogo", "cache"]
+  },
+  {
+    "id": "faq-06",
+    "pregunta": "¿Se puede desplegar un viernes?",
+    "respuesta": "No. Los viernes no se despliega a producción. La única excepción es el arreglo de un incidente SEV1, con la aprobación del líder de guardia.",
+    "categoria": "devops",
+    "etiquetas": ["despliegue", "ventanas"]
+  },
+  {
+    "id": "faq-07",
+    "pregunta": "¿A quién le reporto un problema de seguridad?",
+    "respuesta": "Se reporta enseguida a seguridad@colibri.example, aunque no estés seguro de que sea grave. Reportar un falso positivo no tiene consecuencias.",
+    "categoria": "seguridad",
+    "etiquetas": ["reportes", "seguridad"]
+  },
+  {
+    "id": "faq-08",
+    "pregunta": "¿Qué significa el error HTTP 429 que devuelve el api-gateway?",
+    "respuesta": "Significa que se superó el límite de 120 requests por minuto por IP. Hay que esperar y reintentar con backoff exponencial; reintentar enseguida solo empeora el bloqueo.",
+    "categoria": "arquitectura",
+    "etiquetas": ["api-gateway", "rate-limit"]
+  }
+]

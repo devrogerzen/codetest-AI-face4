@@ -1,0 +1,52 @@
+[
+  {
+    "pregunta": "¿Qué flag hay que activar cuando falla el proveedor de pagos?",
+    "documento_id_esperado": "guia_incidentes.md#runbook-errores-5xx-en-pagos",
+    "nota": "la respuesta es un término técnico exacto (pagos_modo_cola)"
+  },
+  {
+    "pregunta": "¿Qué encabezado se usa para seguir una compra de punta a punta entre los servicios?",
+    "documento_id_esperado": "arquitectura.md#observabilidad",
+    "nota": "la respuesta es un nombre propio (X-Colibri-Trace-Id)"
+  },
+  {
+    "pregunta": "¿Cada cuánto se rotan las credenciales del proveedor de pagos?",
+    "documento_id_esperado": "seguridad.md#gestion-de-secretos",
+    "nota": "comparte palabras con la pregunta"
+  },
+  {
+    "pregunta": "¿Qué condiciones tiene que cumplir una versión canary para recibir todo el tráfico?",
+    "documento_id_esperado": "despliegue.md#despliegue-canary",
+    "nota": "comparte palabras con la pregunta"
+  },
+  {
+    "pregunta": "¿Con qué comando se pasa Redis a la réplica?",
+    "documento_id_esperado": "guia_incidentes.md#runbook-redis-caido-o-inaccesible",
+    "nota": "la respuesta es un comando (colibri-ops redis failover)"
+  },
+  {
+    "pregunta": "Si alguien pega una contraseña en un chat, ¿qué hay que hacer?",
+    "documento_id_esperado": "seguridad.md#gestion-de-secretos",
+    "nota": "paráfrasis: el documento habla de 'secretos filtrados', no de 'contraseñas'"
+  },
+  {
+    "pregunta": "¿Puedo hacer un deploy un viernes?",
+    "documento_id_esperado": ["despliegue.md#ventanas-de-despliegue", "faq.json#faq-06"],
+    "nota": "paráfrasis ('deploy' por 'desplegar') con dos documentos relevantes"
+  },
+  {
+    "pregunta": "¿Qué significa un error 429 del gateway?",
+    "documento_id_esperado": ["faq.json#faq-08", "arquitectura.md#servicios"],
+    "nota": "código exacto (429) con dos documentos relevantes"
+  },
+  {
+    "pregunta": "¿Cuánto tarda en actualizarse un precio en la tienda?",
+    "documento_id_esperado": ["faq.json#faq-05", "arquitectura.md#datos"],
+    "nota": "paráfrasis: el documento habla de TTL y caché"
+  },
+  {
+    "pregunta": "¿En cuántos días hay que presentar el postmortem de un incidente?",
+    "documento_id_esperado": "guia_incidentes.md#postmortem",
+    "nota": "comparte palabras con la pregunta"
+  }
+]
